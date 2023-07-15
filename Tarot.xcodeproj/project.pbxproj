@@ -7,18 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA33174E2A612C380017F8EE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33174D2A612C380017F8EE /* CardView.swift */; };
+		EA3A3C522A617807003C2439 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A3C512A617807003C2439 /* MainView.swift */; };
+		EA3A3C5A2A629B2F003C2439 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = EA3A3C592A629B2F003C2439 /* Realm */; };
+		EA3A3C5C2A629B2F003C2439 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EA3A3C5B2A629B2F003C2439 /* RealmSwift */; };
 		EA3DFE472A5D211B00795E73 /* TarotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DFE462A5D211B00795E73 /* TarotApp.swift */; };
 		EA3DFE492A5D211B00795E73 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DFE482A5D211B00795E73 /* ContentView.swift */; };
 		EA3DFE4B2A5D211E00795E73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA3DFE4A2A5D211E00795E73 /* Assets.xcassets */; };
 		EA3DFE4E2A5D211E00795E73 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA3DFE4D2A5D211E00795E73 /* Preview Assets.xcassets */; };
+		EA3DFE722A5FCFA100795E73 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = EA3DFE712A5FCFA100795E73 /* OpenAI */; };
+		EA3DFE762A5FFFAF00795E73 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DFE752A5FFFAF00795E73 /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA33174D2A612C380017F8EE /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		EA3A3C512A617807003C2439 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		EA3DFE432A5D211B00795E73 /* Tarot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tarot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA3DFE462A5D211B00795E73 /* TarotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotApp.swift; sourceTree = "<group>"; };
 		EA3DFE482A5D211B00795E73 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EA3DFE4A2A5D211E00795E73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA3DFE4D2A5D211E00795E73 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EA3DFE752A5FFFAF00795E73 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,12 +35,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA3A3C5C2A629B2F003C2439 /* RealmSwift in Frameworks */,
+				EA3A3C5A2A629B2F003C2439 /* Realm in Frameworks */,
+				EA3DFE722A5FCFA100795E73 /* OpenAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA33174C2A603D170017F8EE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA3DFE752A5FFFAF00795E73 /* Card.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA3A3C532A61780F003C2439 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA3A3C512A617807003C2439 /* MainView.swift */,
+				EA3DFE482A5D211B00795E73 /* ContentView.swift */,
+				EA3A3C542A617822003C2439 /* Subview */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA3A3C542A617822003C2439 /* Subview */ = {
+			isa = PBXGroup;
+			children = (
+				EA33174D2A612C380017F8EE /* CardView.swift */,
+			);
+			path = Subview;
+			sourceTree = "<group>";
+		};
+		EA3A3C572A629130003C2439 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		EA3DFE3A2A5D211B00795E73 = {
 			isa = PBXGroup;
 			children = (
@@ -52,7 +97,9 @@
 			isa = PBXGroup;
 			children = (
 				EA3DFE462A5D211B00795E73 /* TarotApp.swift */,
-				EA3DFE482A5D211B00795E73 /* ContentView.swift */,
+				EA3A3C532A61780F003C2439 /* View */,
+				EA3A3C572A629130003C2439 /* ViewModel */,
+				EA33174C2A603D170017F8EE /* Model */,
 				EA3DFE4A2A5D211E00795E73 /* Assets.xcassets */,
 				EA3DFE4C2A5D211E00795E73 /* Preview Content */,
 			);
@@ -83,6 +130,11 @@
 			dependencies = (
 			);
 			name = Tarot;
+			packageProductDependencies = (
+				EA3DFE712A5FCFA100795E73 /* OpenAI */,
+				EA3A3C592A629B2F003C2439 /* Realm */,
+				EA3A3C5B2A629B2F003C2439 /* RealmSwift */,
+			);
 			productName = Tarot;
 			productReference = EA3DFE432A5D211B00795E73 /* Tarot.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +163,10 @@
 				Base,
 			);
 			mainGroup = EA3DFE3A2A5D211B00795E73;
+			packageReferences = (
+				EA3DFE702A5FCFA100795E73 /* XCRemoteSwiftPackageReference "OpenAI" */,
+				EA3A3C582A629B2F003C2439 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = EA3DFE442A5D211B00795E73 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +193,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA3DFE762A5FFFAF00795E73 /* Card.swift in Sources */,
 				EA3DFE492A5D211B00795E73 /* ContentView.swift in Sources */,
+				EA33174E2A612C380017F8EE /* CardView.swift in Sources */,
+				EA3A3C522A617807003C2439 /* MainView.swift in Sources */,
 				EA3DFE472A5D211B00795E73 /* TarotApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,7 +334,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +367,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -347,6 +406,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EA3A3C582A629B2F003C2439 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		EA3DFE702A5FCFA100795E73 /* XCRemoteSwiftPackageReference "OpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MacPaw/OpenAI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EA3A3C592A629B2F003C2439 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA3A3C582A629B2F003C2439 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		EA3A3C5B2A629B2F003C2439 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA3A3C582A629B2F003C2439 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		EA3DFE712A5FCFA100795E73 /* OpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA3DFE702A5FCFA100795E73 /* XCRemoteSwiftPackageReference "OpenAI" */;
+			productName = OpenAI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EA3DFE3B2A5D211B00795E73 /* Project object */;
 }
