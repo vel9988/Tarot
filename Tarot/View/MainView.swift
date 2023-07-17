@@ -18,14 +18,30 @@ struct MainView: View {
             Spacer()
             
             TextField("What do you want to know about?", text: $text, axis: .vertical)
-                .lineLimit(3, reservesSpace: true)
+                .lineLimit(5, reservesSpace: true)
                 .font(.title3)
                 .foregroundColor(.black)
                 .textFieldStyle(.roundedBorder)
-                .shadow(color: Color(.systemYellow), radius: isEditing ? 20 : 10, x: 0, y: 0)
-                .animation(Animation.spring(), value: isEditing)
+                .background {
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color.white)
+                        .shadow(color: Color(.systemYellow), radius: isEditing ? 20 : 10, x: 0, y: 0)
+                        .animation(Animation.spring(), value: isEditing)
+                }
+                .overlay {
+                    HStack {
+                        Spacer()
+                        VStack {
+                            Spacer()
+                            Text("\(text.count) / 150")
+                        }
+                    }
+                }
                 .onChange(of: text) { newText in
                     isEditing = newText.count > 0
+                    if newText.count > 150 {
+                        text = String(newText.prefix(150))
+                    }
                 }
                 .padding()
             

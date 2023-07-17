@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA0747982A652E1700F363C6 /* SavedPredictionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0747972A652E1700F363C6 /* SavedPredictionsView.swift */; };
 		EA33174E2A612C380017F8EE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33174D2A612C380017F8EE /* CardView.swift */; };
 		EA3A3C522A617807003C2439 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A3C512A617807003C2439 /* MainView.swift */; };
 		EA3A3C5A2A629B2F003C2439 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = EA3A3C592A629B2F003C2439 /* Realm */; };
 		EA3A3C5C2A629B2F003C2439 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EA3A3C5B2A629B2F003C2439 /* RealmSwift */; };
+		EA3A3C602A62EE8A003C2439 /* PredictionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A3C5F2A62EE8A003C2439 /* PredictionViewModel.swift */; };
 		EA3DFE472A5D211B00795E73 /* TarotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DFE462A5D211B00795E73 /* TarotApp.swift */; };
-		EA3DFE492A5D211B00795E73 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DFE482A5D211B00795E73 /* ContentView.swift */; };
+		EA3DFE492A5D211B00795E73 /* PredictionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DFE482A5D211B00795E73 /* PredictionView.swift */; };
 		EA3DFE4B2A5D211E00795E73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA3DFE4A2A5D211E00795E73 /* Assets.xcassets */; };
 		EA3DFE4E2A5D211E00795E73 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA3DFE4D2A5D211E00795E73 /* Preview Assets.xcassets */; };
 		EA3DFE722A5FCFA100795E73 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = EA3DFE712A5FCFA100795E73 /* OpenAI */; };
@@ -20,11 +22,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA0747972A652E1700F363C6 /* SavedPredictionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPredictionsView.swift; sourceTree = "<group>"; };
 		EA33174D2A612C380017F8EE /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		EA3A3C512A617807003C2439 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		EA3A3C5F2A62EE8A003C2439 /* PredictionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionViewModel.swift; sourceTree = "<group>"; };
 		EA3DFE432A5D211B00795E73 /* Tarot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tarot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA3DFE462A5D211B00795E73 /* TarotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotApp.swift; sourceTree = "<group>"; };
-		EA3DFE482A5D211B00795E73 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EA3DFE482A5D211B00795E73 /* PredictionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionView.swift; sourceTree = "<group>"; };
 		EA3DFE4A2A5D211E00795E73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA3DFE4D2A5D211E00795E73 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EA3DFE752A5FFFAF00795E73 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -56,7 +60,8 @@
 			isa = PBXGroup;
 			children = (
 				EA3A3C512A617807003C2439 /* MainView.swift */,
-				EA3DFE482A5D211B00795E73 /* ContentView.swift */,
+				EA3DFE482A5D211B00795E73 /* PredictionView.swift */,
+				EA0747972A652E1700F363C6 /* SavedPredictionsView.swift */,
 				EA3A3C542A617822003C2439 /* Subview */,
 			);
 			path = View;
@@ -73,6 +78,7 @@
 		EA3A3C572A629130003C2439 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EA3A3C5F2A62EE8A003C2439 /* PredictionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -194,7 +200,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA3DFE762A5FFFAF00795E73 /* Card.swift in Sources */,
-				EA3DFE492A5D211B00795E73 /* ContentView.swift in Sources */,
+				EA3A3C602A62EE8A003C2439 /* PredictionViewModel.swift in Sources */,
+				EA0747982A652E1700F363C6 /* SavedPredictionsView.swift in Sources */,
+				EA3DFE492A5D211B00795E73 /* PredictionView.swift in Sources */,
 				EA33174E2A612C380017F8EE /* CardView.swift in Sources */,
 				EA3A3C522A617807003C2439 /* MainView.swift in Sources */,
 				EA3DFE472A5D211B00795E73 /* TarotApp.swift in Sources */,
