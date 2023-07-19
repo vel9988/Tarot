@@ -18,7 +18,7 @@ struct PredictionView: View {
     
     var body: some View {
         NavigationStack {
-            VStack() {
+            VStack {
                 ScrollView(.horizontal, showsIndicators: false) {
                     if isMiniCardsIncluded {
                         HStack {
@@ -31,7 +31,7 @@ struct PredictionView: View {
                     } else {
                         HStack {
                             ForEach(cards, id: \.self) { card in
-                                GeometryReader { geometry in
+                                GeometryReader { _ in
                                     CardView(cardName: card)
                                     //                                        .padding(30)
                                     //                                        .scaleEffect(geometry.frame(in: .global).midX / 1000 + 1)

@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct MainView: View {
-    
+
     @State var text: String = ""
     @State var isEditing: Bool = false
     
     var body: some View {
-        VStack() {
+        VStack {
             
             Spacer()
             
@@ -38,7 +38,7 @@ struct MainView: View {
                     }
                 }
                 .onChange(of: text) { newText in
-                    isEditing = newText.count > 0
+                    isEditing = newText.isEmpty
                     if newText.count > 150 {
                         text = String(newText.prefix(150))
                     }

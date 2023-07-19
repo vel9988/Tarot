@@ -15,44 +15,16 @@ struct SavedPredictionsView: View {
         
         NavigationStack {
             VStack {
-                ScrollView(.vertical, showsIndicators: true) {
-                    ForEach(cards, id: \.self) { card in
-                        NavigationLink(destination: PredictionView()) {
-                            HStack {
-                                VStack() {
-                                    Text("Question title")
-                                        .font(Font.title2.bold())
-                                        .foregroundColor(.white)
-                                        .padding(.horizontal)
-                                    
-                                    Text("Prediction 11/02/23")
-                                        .foregroundColor(.white)
-//                                        .frame(maxWidth: .infinity, maxHeight: 70)
-                                        .padding(.horizontal)
-                                    
-                                }
-                                
-                                Spacer()
-                                
-                                Image(systemName: "chevron.right")
-                                    .foregroundColor(.white)
-                                    .padding()
-                                
-                            }
-                            .background {
-                                RoundedRectangle(cornerRadius: 15)
-                            }
-                        }
+                List(cards, id: \.self) { card in
+                    NavigationLink {
+                        PredictionView()
+                    } label: {
+                        PredictionCell(shortDescriptionText: card, descriptionDate: "18/07/23")
                     }
+                    
                 }
-                //                List(cards, id: \.self) { card in
-                //                    NavigationLink(destination: PredictionView()) {
-                //                        Text(card)
-                //                            .padding()
-                //                    }
-                //
-                //                }
-            }.background(Image("Background"))
+            }
+            .background(Image("Background"))
             
         }
         
