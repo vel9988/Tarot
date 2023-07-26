@@ -8,5 +8,13 @@
 import Foundation
 
 final class PredictionViewModel: ObservableObject {
-    @Published var predictionText: String = "Понимание ваших карьерных перспектив может быть сложной задачей, но я с радостью помогу вам найти некоторые указания и руководство с помощью таро."
+    
+    @Published var cards: [String]
+    @Published var predictionText: String
+    
+    init(cards: [String], predictionText: String) {
+        self.cards = cards
+        self.predictionText = predictionText
+    }
+    
 }

@@ -17,12 +17,13 @@ struct SavedPredictionsView: View {
             VStack {
                 List(cards, id: \.self) { card in
                     NavigationLink {
-                        PredictionView()
+//                        ScreenFactory.shared.createScreen(.prediction)
                     } label: {
                         PredictionCell(shortDescriptionText: card, descriptionDate: "18/07/23")
                     }
                     
                 }
+                
             }
             .background(Image("Background"))
             

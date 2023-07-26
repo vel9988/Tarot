@@ -11,7 +11,8 @@ import SwiftUI
 struct TarotApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            CoordinatorView()
+                .preferredColorScheme(.light)
         }
     }
 }

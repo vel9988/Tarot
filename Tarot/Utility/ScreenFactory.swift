@@ -11,12 +11,12 @@ import SwiftUI
 enum Screen {
     case mainTab
     case main
-    case prediction
+//    case prediction
     case savedPredictions
 }
 
-
 final class ScreenFactory {
+    
     static let shared = ScreenFactory()
 
     func createScreen(_ screen: Screen) -> some View {
@@ -24,12 +24,21 @@ final class ScreenFactory {
         case .mainTab:
             return AnyView(MainTabView())
         case .main:
-            return AnyView(MainView())
-        case .prediction:
-            return AnyView(PredictionView())
+            return AnyView(MainView(viewModel: MainViewModel()))
+//        case .prediction:
+//            return AnyView(PredictionView(viewModel: PredictionViewModel()))
         case .savedPredictions:
             return AnyView(SavedPredictionsView())
         }
+    }
+    
+    func createPredictionScreen(cards: [String], predictionText: String) -> some View {
+        let predictionViewModel = PredictionViewModel(cards: cards, predictionText: predictionText)
+        return AnyView(PredictionView(viewModel: predictionViewModel))
+    }
+    
+    func createPredictionScreen1() {
+        
     }
     
 }

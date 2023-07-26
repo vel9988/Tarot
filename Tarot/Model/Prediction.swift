@@ -6,8 +6,14 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct Prediction {
-    let cards: [String]
-    let predictionText: String
+final class Prediction: Object, ObjectKeyIdentifiable {
+    
+    @Persisted(primaryKey: true) var id: ObjectId
+    @Persisted var name: String?
+    @Persisted var dateCreation: Date?
+    @Persisted var cards: List<String>
+    @Persisted var predictionText: String
+    
 }

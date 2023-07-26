@@ -10,10 +10,8 @@ import SwiftUI
 struct PredictionView: View {
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @ObservedObject var viewModel: PredictionViewModel
     
-    @ObservedObject var viewModel = PredictionViewModel()
-    
-    @State var cards: [String] = ["testCard", "testCard1", "testCard2", "testCard3", "testCard"]
     @State var isMiniCardsIncluded: Bool = true
     
     var body: some View {
@@ -22,7 +20,7 @@ struct PredictionView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     if isMiniCardsIncluded {
                         HStack {
-                            ForEach(cards, id: \.self) { card in
+                            ForEach(viewModel.cards, id: \.self) { card in
                                 CardView(cardName: card)
                             }
                         }
@@ -30,15 +28,12 @@ struct PredictionView: View {
                         .frame(height: 300)
                     } else {
                         HStack {
-                            ForEach(cards, id: \.self) { card in
+                            ForEach(viewModel.cards, id: \.self) { card in
                                 GeometryReader { _ in
                                     CardView(cardName: card)
-                                    //                                        .padding(30)
-                                    //                                        .scaleEffect(geometry.frame(in: .global).midX / 1000 + 1)
                                 }
                                 .frame(width: 300, height: 500)
                                 .frame(height: 660)
-                                
                             }
                         }
                     }
@@ -58,7 +53,7 @@ struct PredictionView: View {
                 .background {
                     RoundedRectangle(cornerRadius: 10)
                         .fill(Color.white)
-                        .shadow(color: Color(.systemYellow), radius: 10, x: 0, y: 0)
+                        .shadow(color: Color(.white), radius: 10, x: 0, y: 0)
                 }
                 .opacity(isMiniCardsIncluded ? 1 : 0)
                 
@@ -70,6 +65,7 @@ struct PredictionView: View {
                     Button {
                         self.presentationMode.wrappedValue.dismiss()
                     } label: {
+                        // TODO: - изменить иконку назад
                         Image(systemName: "chevron.backward.square.fill")
                             .foregroundColor(.white)
                     }
@@ -93,10 +89,8 @@ struct PredictionView: View {
     
 }
 
-//    .navigationBarBackButtonHidden(true)
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        PredictionView()
+        PredictionView(viewModel: PredictionViewModel(cards: ["Judgment", "The Fool", "The High Priestess", "Eight of Swords", "Ten of Swords"], predictionText: "Test"))
     }
 }
