@@ -13,6 +13,7 @@ struct PredictionView: View {
     @ObservedObject var viewModel: PredictionViewModel
     
     @State var isMiniCardsIncluded: Bool = true
+    @State var isSaved: Bool = false
     
     var body: some View {
         NavigationStack {
@@ -65,11 +66,23 @@ struct PredictionView: View {
                     Button {
                         self.presentationMode.wrappedValue.dismiss()
                     } label: {
-                        // TODO: - изменить иконку назад
                         Image(systemName: "chevron.backward.square.fill")
                             .foregroundColor(.white)
                     }
                 }
+                //TODO: - Изменить кнопку Saved
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        viewModel.savePrediction()
+                        isSaved = true
+                    } label: {
+                        Text("Saved")
+                            .foregroundColor(.white)
+                    }
+                    .disabled(isSaved)
+                    
+                }
+                
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         isMiniCardsIncluded.toggle()

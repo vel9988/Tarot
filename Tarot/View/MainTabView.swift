@@ -11,7 +11,7 @@ struct MainTabView: View {
     
     init() {
         // TODO: - подобрать цвет к табВью
-        UITabBar.appearance().backgroundColor = UIColor.systemGray
+        UITabBar.appearance().backgroundColor = UIColor.brown
     }
     
     var body: some View {

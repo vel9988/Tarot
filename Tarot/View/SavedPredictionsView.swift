@@ -6,27 +6,38 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct SavedPredictionsView: View {
     
-    @State var cards: [String] = ["testCard", "testCard1", "testCard2", "testCard3"]
+    @ObservedResults(Prediction.self) var predictionLists
+    
+    @StateObject var viewModel: SavedPredictionsViewModel
     
     var body: some View {
-        
         NavigationStack {
-            VStack {
-                List(cards, id: \.self) { card in
-                    NavigationLink {
-//                        ScreenFactory.shared.createScreen(.prediction)
-                    } label: {
-                        PredictionCell(shortDescriptionText: card, descriptionDate: "18/07/23")
+            ZStack {
+                List {
+                    ForEach(predictionLists, id: \.id) { prediction in
+                        NavigationLink {
+                            let predictionVM = PredictionViewModel(cards: Array(prediction.cards),
+                                                                   predictionText: prediction.predictionText)
+                            PredictionView(viewModel: predictionVM)
+                        } label: {
+                            HStack {
+                                PredictionCellView(predictionDetail: prediction)
+                            }
+                        }
+                    }
+                    .onDelete { index in
+                        viewModel.deletePrediction(at: index)
                     }
                     
                 }
-                
+                .listStyle(.plain)
+                .background(Image("Background"))
+            .padding(10)
             }
-            .background(Image("Background"))
-            
         }
         
     }
@@ -35,6 +46,6 @@ struct SavedPredictionsView: View {
 
 struct SavedPredictionsView_Previews: PreviewProvider {
     static var previews: some View {
-        SavedPredictionsView()
+        SavedPredictionsView(viewModel: SavedPredictionsViewModel())
     }
 }

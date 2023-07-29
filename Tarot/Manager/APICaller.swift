@@ -14,12 +14,19 @@ final class APICaller {
     let openAI = OpenAI(apiToken: R.API.apiKey)
     let defaultTorolog = R.RoleGPT.torolog
     
-    func predictionRequest(content: String, cards: [String]) async -> String {
-        let queryOne = ChatQuery(model: .gpt3_5Turbo,
-                                 messages: [.init(role: .user, content: "\(defaultTorolog) \(cards)" + content)])
+    func predictionRequest(question: String, cards: [String]) async -> String {
+        
+        let query = ChatQuery(model: .gpt3_5Turbo,
+                              messages: [.init(role: .user, content: "\(defaultTorolog) Вопрос:\(question), Карты:\(cards)")],
+                              temperature: 0.6,
+                              topP: 0.7,
+                              maxTokens: 100,
+                              presencePenalty: 1.2,
+                              frequencyPenalty: 0.6)
         do {
-            let result = try await openAI.chats(query: queryOne)
-            print("Correct")
+            let result = try await openAI.chats(query: query)
+            print("CORRECT!!")
+            print(result)
             if let result = result.choices[0].message.content {
                 return result
             } else {
@@ -27,7 +34,7 @@ final class APICaller {
             }
         } catch {
             print("error")
-            return ""
+            return "Sorry something went wrong"
         }
     }
     

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		EA0747982A652E1700F363C6 /* SavedPredictionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0747972A652E1700F363C6 /* SavedPredictionsView.swift */; };
-		EA07479A2A666F8300F363C6 /* PredictionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0747992A666F8300F363C6 /* PredictionCell.swift */; };
 		EA0903D92A66CF83008C51BA /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EA0903D82A66CF83008C51BA /* .swiftlint.yml */; };
 		EA0903DC2A67A795008C51BA /* ScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0903DB2A67A795008C51BA /* ScreenFactory.swift */; };
 		EA0903DE2A691BCB008C51BA /* PredictionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0903DD2A691BCB008C51BA /* PredictionList.swift */; };
@@ -18,6 +17,7 @@
 		EA0903EC2A6BDDCB008C51BA /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0903EB2A6BDDCB008C51BA /* Resources.swift */; };
 		EA0903EE2A6BE77A008C51BA /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0903ED2A6BE77A008C51BA /* Cards.swift */; };
 		EA0903F02A6D071B008C51BA /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0903EF2A6D071B008C51BA /* MainViewModel.swift */; };
+		EA124F022A7285E70046E1DF /* SavedPredictionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA124F012A7285E70046E1DF /* SavedPredictionsViewModel.swift */; };
 		EA33174E2A612C380017F8EE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33174D2A612C380017F8EE /* CardView.swift */; };
 		EA3A3C522A617807003C2439 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A3C512A617807003C2439 /* MainView.swift */; };
 		EA3A3C5A2A629B2F003C2439 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = EA3A3C592A629B2F003C2439 /* Realm */; };
@@ -31,12 +31,13 @@
 		EA3DFE762A5FFFAF00795E73 /* Prediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DFE752A5FFFAF00795E73 /* Prediction.swift */; };
 		EA9FFF502A66C50D00A3806B /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9FFF4F2A66C50D00A3806B /* MainTabView.swift */; };
 		EAC6DB752A6E96F400C3D4D4 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6DB742A6E96F400C3D4D4 /* APICaller.swift */; };
-		EAC6DB792A70EB2600C3D4D4 /* ChatResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6DB782A70EB2600C3D4D4 /* ChatResult.swift */; };
+		EAC6DB7B2A7138AC00C3D4D4 /* PredictionDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6DB7A2A7138AC00C3D4D4 /* PredictionDetails.swift */; };
+		EAC6DB7F2A713A5200C3D4D4 /* PredictionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6DB7E2A713A5200C3D4D4 /* PredictionCellView.swift */; };
+		EAFFA7782A7398600011011A /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFFA7772A7398600011011A /* RealmManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EA0747972A652E1700F363C6 /* SavedPredictionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPredictionsView.swift; sourceTree = "<group>"; };
-		EA0747992A666F8300F363C6 /* PredictionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionCell.swift; sourceTree = "<group>"; };
 		EA0903D82A66CF83008C51BA /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		EA0903DB2A67A795008C51BA /* ScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFactory.swift; sourceTree = "<group>"; };
 		EA0903DD2A691BCB008C51BA /* PredictionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionList.swift; sourceTree = "<group>"; };
@@ -46,6 +47,7 @@
 		EA0903EB2A6BDDCB008C51BA /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		EA0903ED2A6BE77A008C51BA /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
 		EA0903EF2A6D071B008C51BA /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		EA124F012A7285E70046E1DF /* SavedPredictionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPredictionsViewModel.swift; sourceTree = "<group>"; };
 		EA33174D2A612C380017F8EE /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		EA3A3C512A617807003C2439 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		EA3A3C5F2A62EE8A003C2439 /* PredictionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionViewModel.swift; sourceTree = "<group>"; };
@@ -57,7 +59,9 @@
 		EA3DFE752A5FFFAF00795E73 /* Prediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prediction.swift; sourceTree = "<group>"; };
 		EA9FFF4F2A66C50D00A3806B /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		EAC6DB742A6E96F400C3D4D4 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
-		EAC6DB782A70EB2600C3D4D4 /* ChatResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatResult.swift; sourceTree = "<group>"; };
+		EAC6DB7A2A7138AC00C3D4D4 /* PredictionDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionDetails.swift; sourceTree = "<group>"; };
+		EAC6DB7E2A713A5200C3D4D4 /* PredictionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionCellView.swift; sourceTree = "<group>"; };
+		EAFFA7772A7398600011011A /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +117,7 @@
 				EA0903DD2A691BCB008C51BA /* PredictionList.swift */,
 				EA3DFE752A5FFFAF00795E73 /* Prediction.swift */,
 				EA0903ED2A6BE77A008C51BA /* Cards.swift */,
-				EAC6DB782A70EB2600C3D4D4 /* ChatResult.swift */,
+				EAC6DB7A2A7138AC00C3D4D4 /* PredictionDetails.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -134,7 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				EA33174D2A612C380017F8EE /* CardView.swift */,
-				EA0747992A666F8300F363C6 /* PredictionCell.swift */,
+				EAC6DB7E2A713A5200C3D4D4 /* PredictionCellView.swift */,
 			);
 			path = Subview;
 			sourceTree = "<group>";
@@ -142,8 +146,9 @@
 		EA3A3C572A629130003C2439 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				EA3A3C5F2A62EE8A003C2439 /* PredictionViewModel.swift */,
 				EA0903EF2A6D071B008C51BA /* MainViewModel.swift */,
+				EA3A3C5F2A62EE8A003C2439 /* PredictionViewModel.swift */,
+				EA124F012A7285E70046E1DF /* SavedPredictionsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				EAC6DB742A6E96F400C3D4D4 /* APICaller.swift */,
+				EAFFA7772A7398600011011A /* RealmManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -300,11 +306,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA07479A2A666F8300F363C6 /* PredictionCell.swift in Sources */,
 				EA3DFE762A5FFFAF00795E73 /* Prediction.swift in Sources */,
+				EA124F022A7285E70046E1DF /* SavedPredictionsViewModel.swift in Sources */,
 				EA3A3C602A62EE8A003C2439 /* PredictionViewModel.swift in Sources */,
 				EA0903EE2A6BE77A008C51BA /* Cards.swift in Sources */,
 				EA0903EC2A6BDDCB008C51BA /* Resources.swift in Sources */,
+				EAFFA7782A7398600011011A /* RealmManager.swift in Sources */,
+				EAC6DB7B2A7138AC00C3D4D4 /* PredictionDetails.swift in Sources */,
 				EA0747982A652E1700F363C6 /* SavedPredictionsView.swift in Sources */,
 				EA0903DC2A67A795008C51BA /* ScreenFactory.swift in Sources */,
 				EA0903E92A696F1F008C51BA /* View + hideKeyboard.swift in Sources */,
@@ -314,8 +322,8 @@
 				EA33174E2A612C380017F8EE /* CardView.swift in Sources */,
 				EA0903E42A694323008C51BA /* Coordinator.swift in Sources */,
 				EAC6DB752A6E96F400C3D4D4 /* APICaller.swift in Sources */,
+				EAC6DB7F2A713A5200C3D4D4 /* PredictionCellView.swift in Sources */,
 				EA0903E62A6947D5008C51BA /* CoordinatorView.swift in Sources */,
-				EAC6DB792A70EB2600C3D4D4 /* ChatResult.swift in Sources */,
 				EA3A3C522A617807003C2439 /* MainView.swift in Sources */,
 				EA3DFE472A5D211B00795E73 /* TarotApp.swift in Sources */,
 				EA0903DE2A691BCB008C51BA /* PredictionList.swift in Sources */,
@@ -453,6 +461,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -486,6 +495,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;

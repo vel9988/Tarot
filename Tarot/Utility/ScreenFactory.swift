@@ -28,7 +28,7 @@ final class ScreenFactory {
 //        case .prediction:
 //            return AnyView(PredictionView(viewModel: PredictionViewModel()))
         case .savedPredictions:
-            return AnyView(SavedPredictionsView())
+            return AnyView(SavedPredictionsView(viewModel: SavedPredictionsViewModel()))
         }
     }
     
