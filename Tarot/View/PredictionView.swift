@@ -13,7 +13,7 @@ struct PredictionView: View {
     @ObservedObject var viewModel: PredictionViewModel
     
     @State var isMiniCardsIncluded: Bool = true
-    @State var isSaved: Bool = false
+    @State var isSaved: Bool
     
     var body: some View {
         NavigationStack {
@@ -104,6 +104,6 @@ struct PredictionView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        PredictionView(viewModel: PredictionViewModel(cards: ["Judgment", "The Fool", "The High Priestess", "Eight of Swords", "Ten of Swords"], predictionText: "Test"))
+        PredictionView(viewModel: PredictionViewModel(name: "Test Name", cards: ["Judgment", "The Fool", "Eight of Swords", "Ten of Swords"], predictionText: "Test"), isSaved: false)
     }
 }

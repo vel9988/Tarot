@@ -65,7 +65,8 @@ open class Coordinator: ObservableObject {
         switch fullScreenCover {
         case .prediction:
             NavigationStack {
-                ScreenFactory.shared.createPredictionScreen(cards: Array(prediction.cards),
+                ScreenFactory.shared.createPredictionScreen(name: prediction.name,
+                                                            cards: Array(prediction.cards),
                                                             predictionText: prediction.predictionText)
             }
         }

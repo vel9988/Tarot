@@ -10,13 +10,15 @@ import SwiftUI
 struct PredictionCellView: View {
     
     var predictionDetail: Prediction
-    
+        
     var body: some View {
         VStack(alignment: .leading, spacing: 32) {
             HStack {
                 VStack(alignment: .leading) {
                     Text(predictionDetail.name)
-                        .font(.largeTitle.bold())
+                        .font(.headline)
+                        .font(.system(size: 25))
+                        .lineLimit(1)
                     Text(predictionDetail.dateCreation)
                         .font(.subheadline)
                 }
@@ -27,7 +29,7 @@ struct PredictionCellView: View {
                 Image("imageCell")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 100, height: 100)
+                    .frame(width: 90, height: 100)
             }
             
         }

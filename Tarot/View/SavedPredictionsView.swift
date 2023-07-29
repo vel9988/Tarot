@@ -20,9 +20,10 @@ struct SavedPredictionsView: View {
                 List {
                     ForEach(predictionLists, id: \.id) { prediction in
                         NavigationLink {
-                            let predictionVM = PredictionViewModel(cards: Array(prediction.cards),
+                            let predictionVM = PredictionViewModel(name: prediction.name,
+                                                                   cards: Array(prediction.cards),
                                                                    predictionText: prediction.predictionText)
-                            PredictionView(viewModel: predictionVM)
+                            PredictionView(viewModel: predictionVM, isSaved: true)
                         } label: {
                             HStack {
                                 PredictionCellView(predictionDetail: prediction)
@@ -39,7 +40,6 @@ struct SavedPredictionsView: View {
             .padding(10)
             }
         }
-        
     }
     
 }

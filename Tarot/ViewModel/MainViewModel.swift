@@ -11,8 +11,9 @@ final class MainViewModel: ObservableObject {
     
     private let apiCaller = APICaller()
 
-    func createPrediction(cards: [String], predictionText: String) -> Prediction {
+    func createPrediction(name: String, cards: [String], predictionText: String) -> Prediction {
         let prediction = Prediction()
+        prediction.name = name
         prediction.cards.append(objectsIn: cards)
         prediction.predictionText = predictionText
         return prediction

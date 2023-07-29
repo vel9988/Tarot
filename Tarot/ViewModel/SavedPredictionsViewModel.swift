@@ -12,8 +12,6 @@ final class SavedPredictionsViewModel: ObservableObject {
     
     @ObservedResults(Prediction.self) var predictionLists
 
-    //    @Published var predictions: [Prediction]
-
     func deletePrediction(at indexSet: IndexSet) {
         guard let index = indexSet.first else { return }
         let prediction = predictionLists[index]

@@ -11,7 +11,6 @@ import SwiftUI
 enum Screen {
     case mainTab
     case main
-//    case prediction
     case savedPredictions
 }
 
@@ -25,16 +24,14 @@ final class ScreenFactory {
             return AnyView(MainTabView())
         case .main:
             return AnyView(MainView(viewModel: MainViewModel()))
-//        case .prediction:
-//            return AnyView(PredictionView(viewModel: PredictionViewModel()))
         case .savedPredictions:
             return AnyView(SavedPredictionsView(viewModel: SavedPredictionsViewModel()))
         }
     }
     
-    func createPredictionScreen(cards: [String], predictionText: String) -> some View {
-        let predictionViewModel = PredictionViewModel(cards: cards, predictionText: predictionText)
-        return AnyView(PredictionView(viewModel: predictionViewModel))
+    func createPredictionScreen(name: String, cards: [String], predictionText: String) -> some View {
+        let predictionViewModel = PredictionViewModel(name: name, cards: cards, predictionText: predictionText)
+        return AnyView(PredictionView(viewModel: predictionViewModel, isSaved: false))
     }
     
     func createPredictionScreen1() {

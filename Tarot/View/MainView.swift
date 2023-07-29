@@ -83,7 +83,9 @@ struct MainView: View {
                         let randomCards = viewModel.randomCards()
                         Task {
                             let predictionRequest = await APICaller.shared.predictionRequest(question: text, cards: randomCards)
-                            let prediction = viewModel.createPrediction(cards: randomCards, predictionText: predictionRequest )
+                            let prediction = viewModel.createPrediction(name: "\(text.prefix(20))...",
+                                                                        cards: randomCards,
+                                                                        predictionText: predictionRequest )
                             coordinator.prediction = prediction
                             isLoading = false
                             isActionConfirmed = false
