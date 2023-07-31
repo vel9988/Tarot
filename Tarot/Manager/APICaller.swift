@@ -20,7 +20,7 @@ final class APICaller {
                               messages: [.init(role: .user, content: "\(defaultTorolog) Вопрос:\(question), Карты:\(cards)")],
                               temperature: 0.6,
                               topP: 0.7,
-                              maxTokens: 100,
+                              maxTokens: 50,
                               presencePenalty: 1.2,
                               frequencyPenalty: 0.6)
         do {

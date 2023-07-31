@@ -24,19 +24,18 @@ struct SavedPredictionsView: View {
                                                                predictionText: prediction.predictionText)
                         PredictionView(viewModel: predictionVM, isSaved: true)
                     } label: {
-                        HStack {
-                            PredictionCellView(predictionDetail: prediction)
-                        }
+                        PredictionCellView(predictionDetail: prediction)
                     }
                 }
                 .onDelete { index in
                     viewModel.deletePrediction(at: index)
+                    
                 }
                 
             }
-            .listStyle(.plain)
             .background(Image("Background"))
-            .padding(10)
+            .scrollContentBackground(.hidden)
+            .listStyle(.plain)
             
         }
     }
