@@ -16,29 +16,28 @@ struct SavedPredictionsView: View {
     
     var body: some View {
         NavigationStack {
-            ZStack {
-                List {
-                    ForEach(predictionLists, id: \.id) { prediction in
-                        NavigationLink {
-                            let predictionVM = PredictionViewModel(name: prediction.name,
-                                                                   cards: Array(prediction.cards),
-                                                                   predictionText: prediction.predictionText)
-                            PredictionView(viewModel: predictionVM, isSaved: true)
-                        } label: {
-                            HStack {
-                                PredictionCellView(predictionDetail: prediction)
-                            }
+            List {
+                ForEach(predictionLists, id: \.id) { prediction in
+                    NavigationLink {
+                        let predictionVM = PredictionViewModel(name: prediction.name,
+                                                               cards: Array(prediction.cards),
+                                                               predictionText: prediction.predictionText)
+                        PredictionView(viewModel: predictionVM, isSaved: true)
+                    } label: {
+                        HStack {
+                            PredictionCellView(predictionDetail: prediction)
                         }
                     }
-                    .onDelete { index in
-                        viewModel.deletePrediction(at: index)
-                    }
-                    
                 }
-                .listStyle(.plain)
-                .background(Image("Background"))
-            .padding(10)
+                .onDelete { index in
+                    viewModel.deletePrediction(at: index)
+                }
+                
             }
+            .listStyle(.plain)
+            .background(Image("Background"))
+            .padding(10)
+            
         }
     }
     

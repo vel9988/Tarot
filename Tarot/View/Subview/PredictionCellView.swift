@@ -18,7 +18,7 @@ struct PredictionCellView: View {
                     Text(predictionDetail.name)
                         .font(.headline)
                         .font(.system(size: 25))
-                        .lineLimit(1)
+                        .lineLimit(2)
                     Text(predictionDetail.dateCreation)
                         .font(.subheadline)
                 }
@@ -30,8 +30,7 @@ struct PredictionCellView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 90, height: 100)
-            }
-            
+            }            
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding()
