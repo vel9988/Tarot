@@ -14,7 +14,6 @@
 		EA0903E42A694323008C51BA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0903E32A694323008C51BA /* Coordinator.swift */; };
 		EA0903E62A6947D5008C51BA /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0903E52A6947D5008C51BA /* CoordinatorView.swift */; };
 		EA0903E92A696F1F008C51BA /* View + hideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0903E82A696F1E008C51BA /* View + hideKeyboard.swift */; };
-		EA0903EC2A6BDDCB008C51BA /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0903EB2A6BDDCB008C51BA /* Resources.swift */; };
 		EA0903EE2A6BE77A008C51BA /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0903ED2A6BE77A008C51BA /* Cards.swift */; };
 		EA0903F02A6D071B008C51BA /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0903EF2A6D071B008C51BA /* MainViewModel.swift */; };
 		EA124F022A7285E70046E1DF /* SavedPredictionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA124F012A7285E70046E1DF /* SavedPredictionsViewModel.swift */; };
@@ -44,7 +43,6 @@
 		EA0903E32A694323008C51BA /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		EA0903E52A6947D5008C51BA /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
 		EA0903E82A696F1E008C51BA /* View + hideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + hideKeyboard.swift"; sourceTree = "<group>"; };
-		EA0903EB2A6BDDCB008C51BA /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		EA0903ED2A6BE77A008C51BA /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
 		EA0903EF2A6D071B008C51BA /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		EA124F012A7285E70046E1DF /* SavedPredictionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPredictionsViewModel.swift; sourceTree = "<group>"; };
@@ -106,7 +104,6 @@
 		EA0903EA2A6BDDB5008C51BA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				EA0903EB2A6BDDCB008C51BA /* Resources.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -310,7 +307,6 @@
 				EA124F022A7285E70046E1DF /* SavedPredictionsViewModel.swift in Sources */,
 				EA3A3C602A62EE8A003C2439 /* PredictionViewModel.swift in Sources */,
 				EA0903EE2A6BE77A008C51BA /* Cards.swift in Sources */,
-				EA0903EC2A6BDDCB008C51BA /* Resources.swift in Sources */,
 				EAFFA7782A7398600011011A /* RealmManager.swift in Sources */,
 				EAC6DB7B2A7138AC00C3D4D4 /* PredictionDetails.swift in Sources */,
 				EA0747982A652E1700F363C6 /* SavedPredictionsView.swift in Sources */,
