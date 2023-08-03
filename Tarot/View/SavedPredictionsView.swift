@@ -16,7 +16,7 @@ struct SavedPredictionsView: View {
     
     var body: some View {
         NavigationStack {
-            List {
+            ScrollView {
                 ForEach(predictionLists, id: \.id) { prediction in
                     NavigationLink {
                         let predictionVM = PredictionViewModel(name: prediction.name,
@@ -36,7 +36,7 @@ struct SavedPredictionsView: View {
             .background(Image("Background"))
             .scrollContentBackground(.hidden)
             .listStyle(.plain)
-            
+            .padding()
         }
     }
     
