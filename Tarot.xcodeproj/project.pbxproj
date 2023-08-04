@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA016CB92A7CFA50005315AF /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA016CB82A7CFA50005315AF /* SplashScreenView.swift */; };
 		EA0747982A652E1700F363C6 /* SavedPredictionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0747972A652E1700F363C6 /* SavedPredictionsView.swift */; };
 		EA0903D92A66CF83008C51BA /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EA0903D82A66CF83008C51BA /* .swiftlint.yml */; };
 		EA0903DC2A67A795008C51BA /* ScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0903DB2A67A795008C51BA /* ScreenFactory.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA016CB82A7CFA50005315AF /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		EA0747972A652E1700F363C6 /* SavedPredictionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPredictionsView.swift; sourceTree = "<group>"; };
 		EA0903D82A66CF83008C51BA /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		EA0903DB2A67A795008C51BA /* ScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFactory.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 		EA3A3C542A617822003C2439 /* Subview */ = {
 			isa = PBXGroup;
 			children = (
+				EA016CB82A7CFA50005315AF /* SplashScreenView.swift */,
 				EA33174D2A612C380017F8EE /* CardView.swift */,
 				EAC6DB7E2A713A5200C3D4D4 /* PredictionCellView.swift */,
 			);
@@ -316,6 +319,7 @@
 				EAFFA7782A7398600011011A /* RealmManager.swift in Sources */,
 				EA9902062A7CCB31008ADD92 /* ResourcesApp.swift in Sources */,
 				EAC6DB7B2A7138AC00C3D4D4 /* PredictionDetails.swift in Sources */,
+				EA016CB92A7CFA50005315AF /* SplashScreenView.swift in Sources */,
 				EA0747982A652E1700F363C6 /* SavedPredictionsView.swift in Sources */,
 				EA0903DC2A67A795008C51BA /* ScreenFactory.swift in Sources */,
 				EA0903E92A696F1F008C51BA /* View + hideKeyboard.swift in Sources */,

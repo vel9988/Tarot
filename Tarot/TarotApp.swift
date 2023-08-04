@@ -9,9 +9,23 @@ import SwiftUI
 
 @main
 struct TarotApp: App {
+    
+    @State private var showSplashScreen = true
+    
     var body: some Scene {
         WindowGroup {
-            CoordinatorView()
+            if showSplashScreen {
+                SplashScreenView()
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                            withAnimation {
+                                showSplashScreen = false
+                            }
+                        }
+                    }
+            } else {
+                CoordinatorView()
+            }
         }
     }
 }
