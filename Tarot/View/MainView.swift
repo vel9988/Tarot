@@ -38,7 +38,7 @@ struct MainView: View {
                             .foregroundColor(.white)
                     }
                     .padding(.horizontal)
-                    TextField("What do you want to know about?", text: $text, axis: .vertical)
+                    TextField("Ask your question", text: $text, axis: .vertical)
                         .font(.title3)
                         .foregroundColor(.primary)
                         .textFieldStyle(.roundedBorder)
@@ -95,7 +95,7 @@ struct MainView: View {
                     }
                 }
             }
-            .background(Image("Background"))
+            .background(Image("Background").resizable().scaledToFill().ignoresSafeArea(.all))
         }
         .onTapGesture {
             self.hideKeyboard()

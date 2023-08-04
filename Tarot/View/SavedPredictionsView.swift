@@ -16,27 +16,28 @@ struct SavedPredictionsView: View {
     
     var body: some View {
         NavigationStack {
-            ScrollView {
-                ForEach(predictionLists, id: \.id) { prediction in
-                    NavigationLink {
-                        let predictionVM = PredictionViewModel(name: prediction.name,
-                                                               cards: Array(prediction.cards),
-                                                               predictionText: prediction.predictionText)
-                        PredictionView(viewModel: predictionVM, isSaved: true)
-                    } label: {
-                        PredictionCellView(predictionDetail: prediction)
+                ScrollView {
+                    ForEach(predictionLists, id: \.id) { prediction in
+                        NavigationLink {
+                            let predictionVM = PredictionViewModel(name: prediction.name,
+                                                                   cards: Array(prediction.cards),
+                                                                   predictionText: prediction.predictionText)
+                            PredictionView(viewModel: predictionVM, isSaved: true)
+                        } label: {
+                            PredictionCellView(predictionDetail: prediction)
+                        }
                     }
-                }
-                .onDelete { index in
-                    viewModel.deletePrediction(at: index)
+                    .onDelete { index in
+                        viewModel.deletePrediction(at: index)
+                        
+                    }
                     
                 }
-                
-            }
-            .background(Image("Background"))
-            .scrollContentBackground(.hidden)
-            .listStyle(.plain)
-            .padding()
+                .background(Image("Background").resizable().scaledToFill())
+                .scrollContentBackground(.hidden)
+                .listStyle(.plain)
+                .padding()
+            
         }
     }
     

@@ -94,7 +94,7 @@ struct PredictionView: View {
                     }
                 }
             }
-            .background(Image("Background"))
+            .background(Image("Background").resizable().scaledToFill().ignoresSafeArea(.all))
         }
         .navigationBarBackButtonHidden(true)
         
