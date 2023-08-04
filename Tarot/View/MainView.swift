@@ -78,22 +78,22 @@ struct MainView: View {
                     }
                     Button("Отмена", role: .cancel) { }
                 }
-                .onChange(of: isActionConfirmed) { newValue in
-                    if newValue {
-                        let randomCards = viewModel.randomCards()
-                        Task {
-                            let predictionRequest = await APICaller.shared.predictionRequest(question: text, cards: randomCards)
-                            let prediction = viewModel.createPrediction(name: "\(text.prefix(20))...",
-                                                                        cards: randomCards,
-                                                                        predictionText: predictionRequest )
-                            coordinator.prediction = prediction
-                            isLoading = false
-                            isActionConfirmed = false
-                            text = ""
-                            coordinator.present(fullScreenCover: .prediction)
-                        }
-                    }
-                }
+                                    .onChange(of: isActionConfirmed) { newValue in
+                                        if newValue {
+                                            let randomCards = viewModel.randomCards()
+                                            Task {
+                                                let predictionRequest = await APICaller.shared.predictionRequest(question: text, cards: randomCards)
+                                                let prediction = viewModel.createPrediction(name: "\(text.prefix(20))",
+                                                                                            cards: randomCards,
+                                                                                            predictionText: predictionRequest )
+                                                coordinator.prediction = prediction
+                                                isLoading = false
+                                                isActionConfirmed = false
+                                                text = ""
+                                                coordinator.present(fullScreenCover: .prediction)
+                                            }
+                                        }
+                                    }
             }
             .background(Image("Background").resizable().scaledToFill().ignoresSafeArea(.all))
         }
