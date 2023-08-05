@@ -17,8 +17,7 @@ struct MainView: View {
     
     @State var text: String = ""
     @State var isEditing: Bool = false
-    
-    @State private var isLoading = false
+    @State private var isLoading: Bool = false
     
     var body: some View {
         ZStack {
@@ -26,9 +25,7 @@ struct MainView: View {
                 Spacer()
                 
                 if isLoading {
-                    ProgressView("Loading...")
-                        .progressViewStyle(CircularProgressViewStyle(tint: .white))
-                        .foregroundColor(.white)
+                    TarotLoadingAnimationView()
                 }
                 
                 VStack {
@@ -45,9 +42,11 @@ struct MainView: View {
                         .background {
                             RoundedRectangle(cornerRadius: 10)
                                 .fill(Color.white)
-                                .shadow(color: R.ColorApp.glowColor, radius: isEditing ? 20 : 10, x: 0, y: 0)
+                                .shadow(color: .white, radius: isEditing ? 20 : 10, x: 0, y: 0)
                                 .animation(Animation.spring(), value: isEditing)
                         }
+                        .colorScheme(.light)
+                        .background(Color.white)
                         .onChange(of: text) { newText in
                             isEditing = !newText.isEmpty
                             if newText.count > 150 {
@@ -66,7 +65,7 @@ struct MainView: View {
                 .foregroundColor(.white)
                 .background(Color(.black))
                 .cornerRadius(25)
-                .shadow(color: R.ColorApp.glowColor, radius: 5, x: 0, y: 0)
+                .shadow(color: .white, radius: 5, x: 0, y: 0)
                 .disabled(isLoading)
                 .padding()
                 .confirmationDialog("Подтвердите действие",

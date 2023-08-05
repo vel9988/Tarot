@@ -35,6 +35,7 @@
 		EAC6DB752A6E96F400C3D4D4 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6DB742A6E96F400C3D4D4 /* APICaller.swift */; };
 		EAC6DB7B2A7138AC00C3D4D4 /* PredictionDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6DB7A2A7138AC00C3D4D4 /* PredictionDetails.swift */; };
 		EAC6DB7F2A713A5200C3D4D4 /* PredictionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6DB7E2A713A5200C3D4D4 /* PredictionCellView.swift */; };
+		EAF906BE2A7E2E7200A4F8D7 /* TarotLoadingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF906BD2A7E2E7200A4F8D7 /* TarotLoadingAnimationView.swift */; };
 		EAFFA7782A7398600011011A /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFFA7772A7398600011011A /* RealmManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		EAC6DB742A6E96F400C3D4D4 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		EAC6DB7A2A7138AC00C3D4D4 /* PredictionDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionDetails.swift; sourceTree = "<group>"; };
 		EAC6DB7E2A713A5200C3D4D4 /* PredictionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionCellView.swift; sourceTree = "<group>"; };
+		EAF906BD2A7E2E7200A4F8D7 /* TarotLoadingAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotLoadingAnimationView.swift; sourceTree = "<group>"; };
 		EAFFA7772A7398600011011A /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +147,7 @@
 				EA016CB82A7CFA50005315AF /* SplashScreenView.swift */,
 				EA33174D2A612C380017F8EE /* CardView.swift */,
 				EAC6DB7E2A713A5200C3D4D4 /* PredictionCellView.swift */,
+				EAF906BD2A7E2E7200A4F8D7 /* TarotLoadingAnimationView.swift */,
 			);
 			path = Subview;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				EAC6DB7F2A713A5200C3D4D4 /* PredictionCellView.swift in Sources */,
 				EA0903E62A6947D5008C51BA /* CoordinatorView.swift in Sources */,
 				EA3A3C522A617807003C2439 /* MainView.swift in Sources */,
+				EAF906BE2A7E2E7200A4F8D7 /* TarotLoadingAnimationView.swift in Sources */,
 				EA3DFE472A5D211B00795E73 /* TarotApp.swift in Sources */,
 				EA0903DE2A691BCB008C51BA /* PredictionList.swift in Sources */,
 			);
