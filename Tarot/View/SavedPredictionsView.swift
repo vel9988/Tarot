@@ -28,16 +28,13 @@ struct SavedPredictionsView: View {
                             } label: {
                                 PredictionCellView(predictionDetail: prediction)
                             }
-                            Button {
-                                viewModel.deletePrediction(with: prediction.id)
-                            } label: {
-                                ZStack {
-                                    RoundedRectangle(cornerRadius: 10)
-                                        .frame(maxWidth: 30)
-                                        .foregroundColor(.red)
-                                    Image(systemName: "trash")
-                                        .foregroundColor(.white)
+                            .contextMenu {
+                                Button {
+                                    viewModel.deletePrediction(with: prediction.id)
+                                } label: {
+                                    Text("Delete")
                                 }
+
                             }
                             
                         }
