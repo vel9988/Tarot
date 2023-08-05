@@ -17,8 +17,9 @@ struct SavedPredictionsView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                ScrollView {
-                        ForEach(predictionLists, id: \.id) { prediction in
+                ScrollView(showsIndicators: false) {
+                    ForEach(predictionLists, id: \.id) { prediction in
+                        HStack {
                             NavigationLink {
                                 let predictionVM = PredictionViewModel(name: prediction.name,
                                                                        cards: Array(prediction.cards),
@@ -27,16 +28,25 @@ struct SavedPredictionsView: View {
                             } label: {
                                 PredictionCellView(predictionDetail: prediction)
                             }
-                        }
-                        .onDelete { index in
-                            viewModel.deletePrediction(at: index)
+                            Button {
+                                viewModel.deletePrediction(with: prediction.id)
+                            } label: {
+                                ZStack {
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .frame(maxWidth: 30)
+                                        .foregroundColor(.red)
+                                    Image(systemName: "trash")
+                                        .foregroundColor(.white)
+                                }
+                            }
                             
                         }
-                        
                     }
-                    .scrollContentBackground(.hidden)
-                    .listStyle(.plain)
-                    .padding()
+                    
+                }
+                .scrollContentBackground(.hidden)
+                .listStyle(.plain)
+                .padding()
             }
             .background(Image("Background").resizable().scaledToFill().ignoresSafeArea())
             
