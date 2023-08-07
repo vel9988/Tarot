@@ -58,8 +58,15 @@ struct MainView: View {
                 
                 Spacer()
                 
-                Button("Tarot magic") {
+                Button {
                     isConfirmationPresented = true
+                } label: {
+                    HStack {
+                        Image(RApp.Icons.magicWand)
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                        Text("Tarot magic")
+                    }
                 }
                 .frame(width: 200, height: 50)
                 .foregroundColor(.white)

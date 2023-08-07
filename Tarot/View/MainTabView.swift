@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct MainTabView: View {
-    
+        
     init() {
-        // TODO: - подобрать цвет к табВью
         UITabBar.appearance().backgroundColor = UIColor.brown
     }
     
@@ -18,12 +17,12 @@ struct MainTabView: View {
         TabView {
             ScreenFactory.shared.createScreen(.main)
                 .tabItem {
-                    Label("Home", systemImage: "house")
-                }
-            
+                        Label("Home", image: RApp.Icons.magicBall)
+                    }
+                                
             ScreenFactory.shared.createScreen(.savedPredictions)
                 .tabItem {
-                    Label("Predictions", systemImage: "list.bullet.rectangle.portrait.fill")
+                    Label("Predictions", image: RApp.Icons.list)
                 }
         }
         .tint(.white)
