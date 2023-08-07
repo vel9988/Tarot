@@ -66,31 +66,26 @@ struct PredictionView: View {
                     Button {
                         self.presentationMode.wrappedValue.dismiss()
                     } label: {
-                        Image(systemName: "chevron.backward.square.fill")
-                            .foregroundColor(.white)
+                        Image(RApp.Icons.back)
                     }
                 }
-                //TODO: - Изменить кнопку Saved
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         viewModel.savePrediction()
                         isSaved = true
                     } label: {
-                        Text("Saved")
-                            .foregroundColor(.white)
+                        Image(RApp.Icons.save)
                     }
                     .disabled(isSaved)
-                    
                 }
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         isMiniCardsIncluded.toggle()
                     } label: {
-                        Image(isMiniCardsIncluded ? "bigCards" : "miniCards")
+                        Image(isMiniCardsIncluded ? RApp.Icons.zoomIn : RApp.Icons.zoomOut)
                             .resizable()
                             .scaledToFill()
-                            .frame(width: 30, height: 50)
                     }
                 }
             }

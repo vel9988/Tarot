@@ -11,7 +11,16 @@ typealias RApp = ResourcesApp
 
 enum ResourcesApp {
     
-    
+    enum Icons {
+        static let star = "star"
+        static let back = "back"
+        static let list = "list"
+        static let magicBall = "magicBall"
+        static let magicWand = "magicWand"
+        static let save = "save"
+        static let zoomIn = "zoomIn"
+        static let zoomOut = "zoomOut"
+    }
 
 }
 
