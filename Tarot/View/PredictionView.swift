@@ -74,7 +74,12 @@ struct PredictionView: View {
                         viewModel.savePrediction()
                         isSaved = true
                     } label: {
-                        Image(RApp.Icons.save)
+                        if isSaved {
+                            Image(RApp.Icons.save)
+                        } else {
+                            Image(RApp.Icons.save)
+                                .opacity(0.5)
+                        }
                     }
                     .disabled(isSaved)
                 }
