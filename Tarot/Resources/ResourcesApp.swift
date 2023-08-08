@@ -7,9 +7,13 @@
 
 import SwiftUI
 
-typealias RApp = ResourcesApp
+typealias ResApp = ResourcesApp
 
 enum ResourcesApp {
+    
+    enum Color {
+        static let glowColor = "glowColor"
+    }
     
     enum Icons {
         static let star = "star"
@@ -23,4 +27,3 @@ enum ResourcesApp {
     }
 
 }
-

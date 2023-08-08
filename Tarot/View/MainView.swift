@@ -42,7 +42,7 @@ struct MainView: View {
                         .background {
                             RoundedRectangle(cornerRadius: 10)
                                 .fill(Color.white)
-                                .shadow(color: .white, radius: isEditing ? 20 : 10, x: 0, y: 0)
+                                .shadow(color: Color(ResApp.Color.glowColor), radius: isEditing ? 20 : 10, x: 0, y: 0)
                                 .animation(Animation.spring(), value: isEditing)
                         }
                         .colorScheme(.light)
@@ -62,7 +62,7 @@ struct MainView: View {
                     isConfirmationPresented = true
                 } label: {
                     HStack {
-                        Image(RApp.Icons.magicWand)
+                        Image(ResApp.Icons.magicWand)
                             .resizable()
                             .frame(width: 30, height: 30)
                         Text("Tarot magic")

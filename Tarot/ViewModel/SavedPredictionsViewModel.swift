@@ -19,12 +19,6 @@ final class SavedPredictionsViewModel: ObservableObject {
         }
     }
     
-    //    func deletePrediction(at indexSet: IndexSet) {
-    //        guard let index = indexSet.first else { return }
-    //        let prediction = predictionLists[index]
-    //        delete(prediction)
-    //    }
-    
     private func delete(_ prediction: ObjectBase) {
         do {
             let realm = try Realm()

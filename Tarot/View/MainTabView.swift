@@ -17,12 +17,12 @@ struct MainTabView: View {
         TabView {
             ScreenFactory.shared.createScreen(.main)
                 .tabItem {
-                    Label("Home", image: RApp.Icons.magicBall)
+                    Label("To ask", image: ResApp.Icons.magicBall)
                     }
                                 
             ScreenFactory.shared.createScreen(.savedPredictions)
                 .tabItem {
-                    Label("Predictions", image: RApp.Icons.list)
+                    Label("Predictions", image: ResApp.Icons.list)
                 }
         }
         .tint(.white)

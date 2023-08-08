@@ -66,21 +66,23 @@ struct PredictionView: View {
                     Button {
                         self.presentationMode.wrappedValue.dismiss()
                     } label: {
-                        Image(RApp.Icons.back)
+                        Image(ResApp.Icons.back)
                     }
+                    .tint(.white)
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         viewModel.savePrediction()
                         isSaved = true
                     } label: {
-                        if isSaved {
-                            Image(RApp.Icons.save)
+                        if !isSaved {
+                            Image(ResApp.Icons.save)
                         } else {
-                            Image(RApp.Icons.save)
+                            Image(ResApp.Icons.save)
                                 .opacity(0.5)
                         }
                     }
+                    .tint(.white)
                     .disabled(isSaved)
                 }
                 
@@ -88,10 +90,11 @@ struct PredictionView: View {
                     Button {
                         isMiniCardsIncluded.toggle()
                     } label: {
-                        Image(isMiniCardsIncluded ? RApp.Icons.zoomIn : RApp.Icons.zoomOut)
+                        Image(isMiniCardsIncluded ? ResApp.Icons.zoomIn : ResApp.Icons.zoomOut)
                             .resizable()
                             .scaledToFill()
                     }
+                    .tint(.white)
                 }
             }
             .background(Image("Background").resizable().scaledToFill().ignoresSafeArea(.all))
