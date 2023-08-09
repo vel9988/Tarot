@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EA016CB92A7CFA50005315AF /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA016CB82A7CFA50005315AF /* SplashScreenView.swift */; };
+		EA019A4D2A821CBD008A4E0D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA019A4C2A821CBC008A4E0D /* LoadingView.swift */; };
 		EA0747982A652E1700F363C6 /* SavedPredictionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0747972A652E1700F363C6 /* SavedPredictionsView.swift */; };
 		EA0903D92A66CF83008C51BA /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EA0903D82A66CF83008C51BA /* .swiftlint.yml */; };
 		EA0903DC2A67A795008C51BA /* ScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0903DB2A67A795008C51BA /* ScreenFactory.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		EA016CB82A7CFA50005315AF /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		EA019A4C2A821CBC008A4E0D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		EA0747972A652E1700F363C6 /* SavedPredictionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPredictionsView.swift; sourceTree = "<group>"; };
 		EA0903D82A66CF83008C51BA /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		EA0903DB2A67A795008C51BA /* ScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFactory.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				EA33174D2A612C380017F8EE /* CardView.swift */,
 				EAC6DB7E2A713A5200C3D4D4 /* PredictionCellView.swift */,
 				EAF906BD2A7E2E7200A4F8D7 /* TarotLoadingAnimationView.swift */,
+				EA019A4C2A821CBC008A4E0D /* LoadingView.swift */,
 			);
 			path = Subview;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				EA33174E2A612C380017F8EE /* CardView.swift in Sources */,
 				EA0903E42A694323008C51BA /* Coordinator.swift in Sources */,
 				EAC6DB752A6E96F400C3D4D4 /* APICaller.swift in Sources */,
+				EA019A4D2A821CBD008A4E0D /* LoadingView.swift in Sources */,
 				EAC6DB7F2A713A5200C3D4D4 /* PredictionCellView.swift in Sources */,
 				EA0903E62A6947D5008C51BA /* CoordinatorView.swift in Sources */,
 				EA3A3C522A617807003C2439 /* MainView.swift in Sources */,

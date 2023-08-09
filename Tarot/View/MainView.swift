@@ -22,11 +22,8 @@ struct MainView: View {
     var body: some View {
         ZStack {
             VStack {
-                Spacer()
                 
-                if isLoading {
-                    TarotLoadingAnimationView()
-                }
+                Spacer()
                 
                 VStack {
                     HStack {
@@ -102,6 +99,11 @@ struct MainView: View {
                                     }
             }
             .background(Image("Background").resizable().scaledToFill().ignoresSafeArea(.all))
+            
+            if isLoading {
+                LoadingView()
+            }
+            
         }
         .onTapGesture {
             self.hideKeyboard()
