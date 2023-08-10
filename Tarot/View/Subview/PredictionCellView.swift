@@ -15,7 +15,7 @@ struct PredictionCellView: View {
         VStack(alignment: .leading, spacing: 32) {
             HStack {
                 VStack(alignment: .leading) {
-                    Text(predictionDetail.name)
+                    Text(predictionDetail.name + "...")
                         .font(.headline)
                         .font(.system(size: 25))
                         .lineLimit(2)
