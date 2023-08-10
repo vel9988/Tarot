@@ -66,35 +66,38 @@ struct PredictionView: View {
                     Button {
                         self.presentationMode.wrappedValue.dismiss()
                     } label: {
-                        Image(systemName: "chevron.backward.square.fill")
-                            .foregroundColor(.white)
+                        Image(ResApp.Icons.back)
                     }
+                    .tint(.white)
                 }
-                //TODO: - Изменить кнопку Saved
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         viewModel.savePrediction()
                         isSaved = true
                     } label: {
-                        Text("Saved")
-                            .foregroundColor(.white)
+                        if !isSaved {
+                            Image(ResApp.Icons.save)
+                        } else {
+                            Image(ResApp.Icons.save)
+                                .opacity(0.5)
+                        }
                     }
+                    .tint(.white)
                     .disabled(isSaved)
-                    
                 }
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         isMiniCardsIncluded.toggle()
                     } label: {
-                        Image(isMiniCardsIncluded ? "bigCards" : "miniCards")
+                        Image(isMiniCardsIncluded ? ResApp.Icons.zoomIn : ResApp.Icons.zoomOut)
                             .resizable()
                             .scaledToFill()
-                            .frame(width: 30, height: 50)
                     }
+                    .tint(.white)
                 }
             }
-            .background(Image("Background"))
+            .background(Image("Background").resizable().scaledToFill().ignoresSafeArea(.all))
         }
         .navigationBarBackButtonHidden(true)
         

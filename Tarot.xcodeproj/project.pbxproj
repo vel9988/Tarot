@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA016CB92A7CFA50005315AF /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA016CB82A7CFA50005315AF /* SplashScreenView.swift */; };
+		EA019A4D2A821CBD008A4E0D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA019A4C2A821CBC008A4E0D /* LoadingView.swift */; };
 		EA0747982A652E1700F363C6 /* SavedPredictionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0747972A652E1700F363C6 /* SavedPredictionsView.swift */; };
 		EA0903D92A66CF83008C51BA /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EA0903D82A66CF83008C51BA /* .swiftlint.yml */; };
 		EA0903DC2A67A795008C51BA /* ScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0903DB2A67A795008C51BA /* ScreenFactory.swift */; };
@@ -29,14 +31,18 @@
 		EA3DFE4E2A5D211E00795E73 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA3DFE4D2A5D211E00795E73 /* Preview Assets.xcassets */; };
 		EA3DFE722A5FCFA100795E73 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = EA3DFE712A5FCFA100795E73 /* OpenAI */; };
 		EA3DFE762A5FFFAF00795E73 /* Prediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DFE752A5FFFAF00795E73 /* Prediction.swift */; };
+		EA9902062A7CCB31008ADD92 /* ResourcesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9902052A7CCB31008ADD92 /* ResourcesApp.swift */; };
 		EA9FFF502A66C50D00A3806B /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9FFF4F2A66C50D00A3806B /* MainTabView.swift */; };
 		EAC6DB752A6E96F400C3D4D4 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6DB742A6E96F400C3D4D4 /* APICaller.swift */; };
 		EAC6DB7B2A7138AC00C3D4D4 /* PredictionDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6DB7A2A7138AC00C3D4D4 /* PredictionDetails.swift */; };
 		EAC6DB7F2A713A5200C3D4D4 /* PredictionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6DB7E2A713A5200C3D4D4 /* PredictionCellView.swift */; };
+		EAF906BE2A7E2E7200A4F8D7 /* TarotLoadingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF906BD2A7E2E7200A4F8D7 /* TarotLoadingAnimationView.swift */; };
 		EAFFA7782A7398600011011A /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFFA7772A7398600011011A /* RealmManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA016CB82A7CFA50005315AF /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		EA019A4C2A821CBC008A4E0D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		EA0747972A652E1700F363C6 /* SavedPredictionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPredictionsView.swift; sourceTree = "<group>"; };
 		EA0903D82A66CF83008C51BA /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		EA0903DB2A67A795008C51BA /* ScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFactory.swift; sourceTree = "<group>"; };
@@ -57,10 +63,12 @@
 		EA3DFE4A2A5D211E00795E73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA3DFE4D2A5D211E00795E73 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EA3DFE752A5FFFAF00795E73 /* Prediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prediction.swift; sourceTree = "<group>"; };
+		EA9902052A7CCB31008ADD92 /* ResourcesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesApp.swift; sourceTree = "<group>"; };
 		EA9FFF4F2A66C50D00A3806B /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		EAC6DB742A6E96F400C3D4D4 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		EAC6DB7A2A7138AC00C3D4D4 /* PredictionDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionDetails.swift; sourceTree = "<group>"; };
 		EAC6DB7E2A713A5200C3D4D4 /* PredictionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionCellView.swift; sourceTree = "<group>"; };
+		EAF906BD2A7E2E7200A4F8D7 /* TarotLoadingAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotLoadingAnimationView.swift; sourceTree = "<group>"; };
 		EAFFA7772A7398600011011A /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				EA25E60B2A7797C2002D1F50 /* Resources.swift */,
+				EA9902052A7CCB31008ADD92 /* ResourcesApp.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -137,8 +146,11 @@
 		EA3A3C542A617822003C2439 /* Subview */ = {
 			isa = PBXGroup;
 			children = (
+				EA016CB82A7CFA50005315AF /* SplashScreenView.swift */,
 				EA33174D2A612C380017F8EE /* CardView.swift */,
 				EAC6DB7E2A713A5200C3D4D4 /* PredictionCellView.swift */,
+				EAF906BD2A7E2E7200A4F8D7 /* TarotLoadingAnimationView.swift */,
+				EA019A4C2A821CBC008A4E0D /* LoadingView.swift */,
 			);
 			path = Subview;
 			sourceTree = "<group>";
@@ -311,7 +323,9 @@
 				EA3A3C602A62EE8A003C2439 /* PredictionViewModel.swift in Sources */,
 				EA0903EE2A6BE77A008C51BA /* Cards.swift in Sources */,
 				EAFFA7782A7398600011011A /* RealmManager.swift in Sources */,
+				EA9902062A7CCB31008ADD92 /* ResourcesApp.swift in Sources */,
 				EAC6DB7B2A7138AC00C3D4D4 /* PredictionDetails.swift in Sources */,
+				EA016CB92A7CFA50005315AF /* SplashScreenView.swift in Sources */,
 				EA0747982A652E1700F363C6 /* SavedPredictionsView.swift in Sources */,
 				EA0903DC2A67A795008C51BA /* ScreenFactory.swift in Sources */,
 				EA0903E92A696F1F008C51BA /* View + hideKeyboard.swift in Sources */,
@@ -322,9 +336,11 @@
 				EA33174E2A612C380017F8EE /* CardView.swift in Sources */,
 				EA0903E42A694323008C51BA /* Coordinator.swift in Sources */,
 				EAC6DB752A6E96F400C3D4D4 /* APICaller.swift in Sources */,
+				EA019A4D2A821CBD008A4E0D /* LoadingView.swift in Sources */,
 				EAC6DB7F2A713A5200C3D4D4 /* PredictionCellView.swift in Sources */,
 				EA0903E62A6947D5008C51BA /* CoordinatorView.swift in Sources */,
 				EA3A3C522A617807003C2439 /* MainView.swift in Sources */,
+				EAF906BE2A7E2E7200A4F8D7 /* TarotLoadingAnimationView.swift in Sources */,
 				EA3DFE472A5D211B00795E73 /* TarotApp.swift in Sources */,
 				EA0903DE2A691BCB008C51BA /* PredictionList.swift in Sources */,
 			);

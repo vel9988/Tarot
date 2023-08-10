@@ -17,28 +17,36 @@ struct SavedPredictionsView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                List {
+                ScrollView(showsIndicators: false) {
                     ForEach(predictionLists, id: \.id) { prediction in
-                        NavigationLink {
-                            let predictionVM = PredictionViewModel(name: prediction.name,
-                                                                   cards: Array(prediction.cards),
-                                                                   predictionText: prediction.predictionText)
-                            PredictionView(viewModel: predictionVM, isSaved: true)
-                        } label: {
-                            HStack {
+                        HStack {
+                            NavigationLink {
+                                let predictionVM = PredictionViewModel(name: prediction.name,
+                                                                       cards: Array(prediction.cards),
+                                                                       predictionText: prediction.predictionText)
+                                PredictionView(viewModel: predictionVM, isSaved: true)
+                            } label: {
                                 PredictionCellView(predictionDetail: prediction)
                             }
+                            .contextMenu {
+                                Button {
+                                    viewModel.deletePrediction(with: prediction.id)
+                                } label: {
+                                    Text("Delete")
+                                }
+
+                            }
+                            
                         }
-                    }
-                    .onDelete { index in
-                        viewModel.deletePrediction(at: index)
                     }
                     
                 }
+                .scrollContentBackground(.hidden)
                 .listStyle(.plain)
-                .background(Image("Background"))
-            .padding(10)
+                .padding()
             }
+            .background(Image("Background").resizable().scaledToFill().ignoresSafeArea())
+            
         }
     }
     
