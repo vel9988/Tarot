@@ -31,11 +31,14 @@
 		EA3DFE4E2A5D211E00795E73 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA3DFE4D2A5D211E00795E73 /* Preview Assets.xcassets */; };
 		EA3DFE722A5FCFA100795E73 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = EA3DFE712A5FCFA100795E73 /* OpenAI */; };
 		EA3DFE762A5FFFAF00795E73 /* Prediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DFE752A5FFFAF00795E73 /* Prediction.swift */; };
+		EA873DA02A8A017F00233AD0 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA873D9F2A8A017F00233AD0 /* LottieView.swift */; };
+		EA873DAA2A8A0EF100233AD0 /* animation.json in Resources */ = {isa = PBXBuildFile; fileRef = EA873DA92A8A0EF100233AD0 /* animation.json */; };
 		EA9902062A7CCB31008ADD92 /* ResourcesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9902052A7CCB31008ADD92 /* ResourcesApp.swift */; };
 		EA9FFF502A66C50D00A3806B /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9FFF4F2A66C50D00A3806B /* MainTabView.swift */; };
 		EAC6DB752A6E96F400C3D4D4 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6DB742A6E96F400C3D4D4 /* APICaller.swift */; };
 		EAC6DB7B2A7138AC00C3D4D4 /* PredictionDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6DB7A2A7138AC00C3D4D4 /* PredictionDetails.swift */; };
 		EAC6DB7F2A713A5200C3D4D4 /* PredictionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6DB7E2A713A5200C3D4D4 /* PredictionCellView.swift */; };
+		EADBC0712A89FC88003EACE2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = EADBC0702A89FC88003EACE2 /* Lottie */; };
 		EAF906BE2A7E2E7200A4F8D7 /* TarotLoadingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF906BD2A7E2E7200A4F8D7 /* TarotLoadingAnimationView.swift */; };
 		EAFFA7782A7398600011011A /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFFA7772A7398600011011A /* RealmManager.swift */; };
 /* End PBXBuildFile section */
@@ -63,6 +66,8 @@
 		EA3DFE4A2A5D211E00795E73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA3DFE4D2A5D211E00795E73 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EA3DFE752A5FFFAF00795E73 /* Prediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prediction.swift; sourceTree = "<group>"; };
+		EA873D9F2A8A017F00233AD0 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		EA873DA92A8A0EF100233AD0 /* animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animation.json; sourceTree = "<group>"; };
 		EA9902052A7CCB31008ADD92 /* ResourcesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesApp.swift; sourceTree = "<group>"; };
 		EA9FFF4F2A66C50D00A3806B /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		EAC6DB742A6E96F400C3D4D4 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
@@ -80,6 +85,7 @@
 				EA3A3C5C2A629B2F003C2439 /* RealmSwift in Frameworks */,
 				EA3A3C5A2A629B2F003C2439 /* Realm in Frameworks */,
 				EA3DFE722A5FCFA100795E73 /* OpenAI in Frameworks */,
+				EADBC0712A89FC88003EACE2 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +120,7 @@
 		EA0903EA2A6BDDB5008C51BA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EA873D9C2A8A00CF00233AD0 /* LottieAnimation */,
 				EA25E60B2A7797C2002D1F50 /* Resources.swift */,
 				EA9902052A7CCB31008ADD92 /* ResourcesApp.swift */,
 			);
@@ -151,6 +158,7 @@
 				EAC6DB7E2A713A5200C3D4D4 /* PredictionCellView.swift */,
 				EAF906BD2A7E2E7200A4F8D7 /* TarotLoadingAnimationView.swift */,
 				EA019A4C2A821CBC008A4E0D /* LoadingView.swift */,
+				EA873D9F2A8A017F00233AD0 /* LottieView.swift */,
 			);
 			path = Subview;
 			sourceTree = "<group>";
@@ -208,6 +216,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		EA873D9C2A8A00CF00233AD0 /* LottieAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				EA873DA92A8A0EF100233AD0 /* animation.json */,
+			);
+			path = LottieAnimation;
+			sourceTree = "<group>";
+		};
 		EAC6DB732A6E969F00C3D4D4 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +254,7 @@
 				EA3DFE712A5FCFA100795E73 /* OpenAI */,
 				EA3A3C592A629B2F003C2439 /* Realm */,
 				EA3A3C5B2A629B2F003C2439 /* RealmSwift */,
+				EADBC0702A89FC88003EACE2 /* Lottie */,
 			);
 			productName = Tarot;
 			productReference = EA3DFE432A5D211B00795E73 /* Tarot.app */;
@@ -270,6 +287,7 @@
 			packageReferences = (
 				EA3DFE702A5FCFA100795E73 /* XCRemoteSwiftPackageReference "OpenAI" */,
 				EA3A3C582A629B2F003C2439 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				EADBC06F2A89FC88003EACE2 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = EA3DFE442A5D211B00795E73 /* Products */;
 			projectDirPath = "";
@@ -287,6 +305,7 @@
 			files = (
 				EA0903D92A66CF83008C51BA /* .swiftlint.yml in Resources */,
 				EA3DFE4E2A5D211E00795E73 /* Preview Assets.xcassets in Resources */,
+				EA873DAA2A8A0EF100233AD0 /* animation.json in Resources */,
 				EA3DFE4B2A5D211E00795E73 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +358,7 @@
 				EA019A4D2A821CBD008A4E0D /* LoadingView.swift in Sources */,
 				EAC6DB7F2A713A5200C3D4D4 /* PredictionCellView.swift in Sources */,
 				EA0903E62A6947D5008C51BA /* CoordinatorView.swift in Sources */,
+				EA873DA02A8A017F00233AD0 /* LottieView.swift in Sources */,
 				EA3A3C522A617807003C2439 /* MainView.swift in Sources */,
 				EAF906BE2A7E2E7200A4F8D7 /* TarotLoadingAnimationView.swift in Sources */,
 				EA3DFE472A5D211B00795E73 /* TarotApp.swift in Sources */,
@@ -571,6 +591,14 @@
 				minimumVersion = 0.2.3;
 			};
 		};
+		EADBC06F2A89FC88003EACE2 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -588,6 +616,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EA3DFE702A5FCFA100795E73 /* XCRemoteSwiftPackageReference "OpenAI" */;
 			productName = OpenAI;
+		};
+		EADBC0702A89FC88003EACE2 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EADBC06F2A89FC88003EACE2 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

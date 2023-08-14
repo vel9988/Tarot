@@ -15,15 +15,9 @@ struct TarotLoadingAnimationView: View {
     
     var body: some View {
         VStack {
-            Image(systemName: "star.fill")
-                .font(.largeTitle)
-                .foregroundColor(.yellow)
-                .rotationEffect(.degrees(rotation))
-                .scaleEffect(scale)
-                .animation(
-                    Animation.easeInOut(duration: animationDuration)
-                        .repeatForever(autoreverses: true)
-                )
+            LottieView()
+                .frame(width: 250, height: 250)
+            
             Text("Searching for magic...")
                 .foregroundColor(.white)
                 .font(.headline)
