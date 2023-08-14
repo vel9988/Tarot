@@ -9,7 +9,7 @@ import SwiftUI
 import Lottie
 
 struct LottieView: UIViewRepresentable {
-    let lottieFile: String = "animation"
+    let lottieFile: String
     
     let animationView = LottieAnimationView()
     

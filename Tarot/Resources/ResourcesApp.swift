@@ -25,5 +25,9 @@ enum ResourcesApp {
         static let zoomIn = "zoomIn"
         static let zoomOut = "zoomOut"
     }
+    
+    enum Animation {
+        static let loadingAnimation = "animation"
+    }
 
 }

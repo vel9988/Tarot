@@ -45,7 +45,6 @@ struct CustomBlurView: UIViewRepresentable {
     typealias UIViewType = UIVisualEffectView
     
     var effect: UIBlurEffect.Style
-//    var onChange: (UIVisualEffectView) -> Void
 
     func makeUIView(context: Context) -> UIVisualEffectView {
         let view = UIVisualEffectView(effect: UIBlurEffect(style: effect))
@@ -53,8 +52,6 @@ struct CustomBlurView: UIViewRepresentable {
     }
 
     func updateUIView(_ uiView: UIVisualEffectView, context: Context) {
-//        DispatchQueue.main.async {
-//            onChange(uiView)
-//        }
+        
     }
 }

@@ -123,6 +123,7 @@
 				EA873D9C2A8A00CF00233AD0 /* LottieAnimation */,
 				EA25E60B2A7797C2002D1F50 /* Resources.swift */,
 				EA9902052A7CCB31008ADD92 /* ResourcesApp.swift */,
+				EA0903ED2A6BE77A008C51BA /* Cards.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -132,7 +133,6 @@
 			children = (
 				EA0903DD2A691BCB008C51BA /* PredictionList.swift */,
 				EA3DFE752A5FFFAF00795E73 /* Prediction.swift */,
-				EA0903ED2A6BE77A008C51BA /* Cards.swift */,
 				EAC6DB7A2A7138AC00C3D4D4 /* PredictionDetails.swift */,
 			);
 			path = Model;

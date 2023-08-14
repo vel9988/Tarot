@@ -15,7 +15,7 @@ struct TarotLoadingAnimationView: View {
     
     var body: some View {
         VStack {
-            LottieView()
+            LottieView(lottieFile: ResApp.Animation.loadingAnimation)
                 .frame(width: 250, height: 250)
             
             Text("Searching for magic...")
